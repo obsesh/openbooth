@@ -24,7 +24,7 @@ How to Use
 OpenBooth is highly customizable both in terms of operation, and in styling. Every function within OpenBooth is fully accessible through Javascript - meaning that all that buttons and controls can (and should) be normal HTML elements. 
 
 To initialize OpenBooth, you must pass an object variable to the init() function. Here's a detailed example (** denotes required params):
-
+``
 var options = {
 	'enableSound'						: true, // Camera sounds
 	'enableFlash'						: true, // Camera Flash effect
@@ -65,9 +65,9 @@ var options = {
 };
 
 openbooth.init(options);
-
+``
 OpenBooth supports the following calls:
-
+``
 openbooth.init(options) [Initializes OpenBooth with the given params]
 openbooth.camInit() [Starts a video source]
 openbooth.startPreviewTimer() [Starts a timer and takes a snapshot]
@@ -78,15 +78,15 @@ openbooth.flashCamera() [Triggers the Camera Flash effect]
 openbooth.setBackground(url) [Straps a background image on the Flash element]
 openbooth.savePhoto(postvars) [Uploads the snapshot via normal upload; See Upload Section 1. ]
 openbooth.savePhotoS3(s3vars) [Uploads the snapshot via a multipart upload; See Upload Section 2. ]
-
+``
 
 * Upload Section 1: When using the normal upload method, you must pass an object containing the following params:
-var postvars = {
+``var postvars = {
 	'URL':	'WHERE SHOULD I UPLOAD TO?'
-}
+}``
 
 * Upload Section 2: When using the S3 upload method, you must pass an object containing the following params:
-var s3vars = {
+``var s3vars = {
 	'policy'				:	'',
 	'signature'			: '',
 	'acl'						: 'public-read',
@@ -96,9 +96,9 @@ var s3vars = {
 	'extraPostVars'	: { // Supports virtually unlimited extra post variables
 		'x-amz-meta-'	:	''
 	}
-};
+};``
 
-* Note: Upon loading the Flash element, OpenBooth will automatically fire a callback function. It is important to know that you cannot change the name of this function: function onFlashReady() { }
+* Note: Upon loading the Flash element, OpenBooth will automatically fire a callback function. It is important to know that you cannot change the name of this function: ``function onFlashReady() { }``
 
 Usage Terms
 -----------
