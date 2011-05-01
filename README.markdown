@@ -30,6 +30,7 @@ To initialize OpenBooth, you must pass an object variable to the init() function
 			'enableFlash'			: true, // Camera Flash effect
 			'enableSettingsButton'	: true, // Flash settings button (only appears when hovering over video)
 			'bandwidth'				: 0,  // Max Bandwidth (0 = unlimited) **
+			'contentType'			: "application/octet-stream",  // Uploader Content Type (only used for normal uploads)
 
 			'photoQuality'			: 100, // JPEG Photo quality (0 - 100) **
 			'photoWidth'			: 459, // Photo width **
